@@ -18,6 +18,7 @@ export default new Vuex.Store({
       state.todos.push({
         body: state.newTodo,
         completed: false,
+        edit: false,
       });
     },
     EDIT_TODO(state, todo) {

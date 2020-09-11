@@ -1,11 +1,11 @@
 <template>
   <div class="border mt-3 option ">
     <div class="row">
-      <div class="col-3">
+      <div class="col-lg-3">
         <span class="font-italic text-left">{{ todos.length }} items left</span>
       </div>
-      <div class="col-6">
-        <router-link type="button" class="btn btn-sm btn-info ml-2" to="/"
+      <div class="col-12 col-lg-6 ">
+        <router-link type="button" class="btn btn-sm btn-info " to="/"
           >All</router-link
         >
         <router-link type="button" class="btn btn-sm btn-info ml-2" to="/active"
@@ -18,7 +18,7 @@
           >Completed</router-link
         >
       </div>
-      <div class="col-3">
+      <div class="col-lg-3 mt-2">
         <div
           class="btn btn-sm btn-warning"
           @click="clearAllCompletes()"
@@ -52,7 +52,7 @@ export default {
 
 <style scoped>
 .option {
-  height: 50px;
+  height: fit-content;
   padding: 12px;
 }
 </style>

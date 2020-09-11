@@ -12,15 +12,23 @@
             </span>
 
             <div class="input-group mycustom ml-3  mb-3 ">
+              <span
+                :class="{ del: todo.completed }"
+                class="overflow-auto mt-2 h4 pt-1"
+                v-if="!todo.edit"
+                @click="todo.edit = !todo.edit"
+                >{{ todo.body }}</span
+              >
               <input
                 type="text"
                 :value="todo.body"
                 :disabled="todo.completed"
-                :class="{ del: todo.completed }"
-                class="form-control w-80 border-0 h1 rounded"
-                style="height:50px"
+                class="form-control w-80 border h4 rounded"
+                style="height:fit-content"
                 @change="getUpdated"
-                @keyup.enter="updateTodo(todo)"
+                @keyup.enter="$event.target.blur()"
+                @blur="updateTodo(todo)"
+                v-if="todo.edit"
               />
               <div class="input-group-prepend">
                 <button
@@ -47,7 +55,9 @@ export default {
     getUpdated(e) {
       this.$store.dispatch("getUpdatedTodo", e.target.value);
     },
+
     updateTodo(todo) {
+      todo.edit = !todo.edit;
       this.$store.dispatch("updateTodo", todo);
     },
     complete(todo) {

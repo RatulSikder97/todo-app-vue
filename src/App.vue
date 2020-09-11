@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="display-3 bg-dark text-success text-center">TODOS</div>
-    <div class="main-view w-80 m-5">
+    <div class="main-view">
       <!-- Input -->
       <InputTodo></InputTodo>
       <!-- Route pages -->
@@ -55,5 +55,15 @@ export default {
   box-shadow: 2px 2px 3px #03c78c, 2px -2px 3px #03c78c, -2px 2px 3px #03c78c,
     2px 2px 3px #03c78c;
   height: fit-content;
+  margin: 50px;
+}
+
+@media screen and (max-width: 680px) {
+  html {
+    font-size: 57.2%;
+  }
+  .main-view {
+    margin: 10px 5px;
+  }
 }
 </style>
