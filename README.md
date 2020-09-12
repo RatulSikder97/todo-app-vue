@@ -1,9 +1,7 @@
-# Simple TODO APP using vuejs and vuex
+# TODO APP
 
-### Customize configuration
+Simple TODO APP using vuejs and vuex
 
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Deployed link
 
-```
-
-```
+To visit the site [Click Here](https://vue-todo-rr.netlify.app/).
